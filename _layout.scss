@@ -1,0 +1,97 @@
+.calculator__container {
+    display: flex;
+    box-sizing: border-box;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.screen__container {
+    height: 15vh;
+    .screen {
+        display: flex;
+        height: 11vh;
+        justify-content: right;
+        align-items: flex-end
+    };
+}
+
+.button__container {
+    display: grid;
+    padding: 2rem;
+    height: 100%;
+    grid-template-columns: 21.5% 21.5% 21.5% 21.5%;
+    row-gap: 4%;
+    column-gap: 4%;
+    grid-template-rows: 16% 16% 16% 16% 16%;
+    grid-template-areas: 
+    "c pls pcnt div"
+    "seven eight nine mlti"
+    "four five six minus"
+    "one two three addi"
+    "zer zer deci eqls"
+}
+
+.button__modifier {
+    &--clear {
+        grid-area: c;
+    }
+    &--plusMinus {
+        grid-area: pls;
+    }
+    &--percent {
+        grid-area: pcnt;
+    }
+}
+.button__function {
+    &--divide {
+        grid-area: div;
+    }
+    &--multiply {
+        grid-area: mlti;
+    }
+    &--minus {
+        grid-area: minus;
+    }
+    &--add {
+        grid-area: addi;
+    }
+    &--equals {
+        grid-area: eqls;
+    }
+}
+.button__input {
+    &--zero {
+        grid-area: zer;
+    }
+    &--one {
+        grid-area: one;
+    }
+    &--two {
+        grid-area: two;
+    }
+    &--three {
+        grid-area: three;
+    }
+    &--four {
+        grid-area: four;
+    }
+    &--five {
+        grid-area: five;
+    }
+    &--six {
+        grid-area: six;
+    }
+    &--seven {
+        grid-area: seven;
+    }
+    &--eight {
+        grid-area: eight;
+    }
+    &--nine {
+        grid-area: nine;
+    }
+    &--decimal {
+        grid-area: deci;
+    }
+}

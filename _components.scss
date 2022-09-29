@@ -1,0 +1,17 @@
+@use"./_base.scss" as *;
+
+.calculator__container {
+    background-color: $color-black;
+}
+
+.screen__container {
+    background-color: $color-screen;
+    .screen {
+        border: 20px solid $color-black;
+        .screen__text {
+            font-family: $font-display;
+            font-size: 4rem;
+            color: $color-white;
+        }
+    }
+}

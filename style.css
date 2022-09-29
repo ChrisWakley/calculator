@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&family=Work+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+.calculator__container {
+  background-color: #000000;
+}
+
+.screen__container {
+  background-color: #4f4646a6;
+}
+.screen__container .screen {
+  border: 20px solid #000000;
+}
+.screen__container .screen .screen__text {
+  font-family: "Roboto", sans-serif;
+  font-size: 4rem;
+  color: #fafafa;
+}
+
+.calculator__container {
+  display: flex;
+  box-sizing: border-box;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.screen__container {
+  height: 15vh;
+}
+.screen__container .screen {
+  display: flex;
+  height: 11vh;
+  justify-content: right;
+  align-items: flex-end;
+}
+
+.button__container {
+  display: grid;
+  padding: 2rem;
+  height: 100%;
+  grid-template-columns: 21.5% 21.5% 21.5% 21.5%;
+  row-gap: 4%;
+  column-gap: 4%;
+  grid-template-rows: 16% 16% 16% 16% 16%;
+  grid-template-areas: "c pls pcnt div" "seven eight nine mlti" "four five six minus" "one two three addi" "zer zer deci eqls";
+}
+
+.button__modifier--clear {
+  grid-area: c;
+}
+.button__modifier--plusMinus {
+  grid-area: pls;
+}
+.button__modifier--percent {
+  grid-area: pcnt;
+}
+
+.button__function--divide {
+  grid-area: div;
+}
+.button__function--multiply {
+  grid-area: mlti;
+}
+.button__function--minus {
+  grid-area: minus;
+}
+.button__function--add {
+  grid-area: addi;
+}
+.button__function--equals {
+  grid-area: eqls;
+}
+
+.button__input--zero {
+  grid-area: zer;
+}
+.button__input--one {
+  grid-area: one;
+}
+.button__input--two {
+  grid-area: two;
+}
+.button__input--three {
+  grid-area: three;
+}
+.button__input--four {
+  grid-area: four;
+}
+.button__input--five {
+  grid-area: five;
+}
+.button__input--six {
+  grid-area: six;
+}
+.button__input--seven {
+  grid-area: seven;
+}
+.button__input--eight {
+  grid-area: eight;
+}
+.button__input--nine {
+  grid-area: nine;
+}
+.button__input--decimal {
+  grid-area: deci;
+}

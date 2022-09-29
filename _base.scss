@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Roboto+Mono&family=Work+Sans&display=swap');
+
+$font-display: "Roboto" , sans-serif;
+$font-body: "Roboto Mono" , cursive;
+
+$color-modifier: #0e3d6b;
+$color-function: #00abf5de;
+$color-input: #b5b2b26d;
+$color-white: #fafafa;
+$color-black: #000000;
+$color-screen: #4f4646a6;
+
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
