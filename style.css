@@ -25,6 +25,36 @@ html, body {
   color: #fafafa;
 }
 
+button {
+  border-radius: 50px;
+}
+
+.button__modifier {
+  background-color: #0e3d6b;
+}
+.button__modifier .button__text {
+  font-family: "Roboto Mono", cursive;
+  font-size: 2rem;
+  color: #fafafa;
+}
+
+.button__function {
+  background-color: #00abf5de;
+}
+.button__function .button__text {
+  font-family: "Roboto Mono", cursive;
+  font-size: 2rem;
+}
+
+.button__input {
+  background-color: #b5b2b26d;
+}
+.button__input .button__text {
+  font-family: "Roboto Mono", cursive;
+  font-size: 2rem;
+  color: #fafafa;
+}
+
 .calculator__container {
   display: flex;
   box-sizing: border-box;
