@@ -12,15 +12,15 @@ class Calculator {
     //allows the use of the clear button to reset the display screen.
     clear() {
         //sets both initial and secondary input rows to empty/ ""
-        this.inputInit = ""
-        this.inputSecond = ""
+        this.inputInit = ''
+        this.inputSecond = ''
         //sets the function in use to undefined/awaiting input function.
         this.operation = undefined
     }
     //function to control screen input of numbers.
     affixNumber(number) {
         //this if statement stops more than one decimal point from being input.
-        if (number === "." && this.inputSecond.includes(".")) return
+        if (number === '.' && this.inputSecond.includes('.')) return
         //converting both the already input numbers and currently input numbers to a string allows 
         //more numbers to be added to the string instead of overiting the previous input number.
         this.inputSecond = this.inputSecond.toString() + number.toString()
@@ -29,9 +29,9 @@ class Calculator {
     //allows us to input a calculator function (had to name parameter operation as function is a control word.)
     chooseFunction(operation) {
         //this will prevent a function input if no number input has been made.
-        if(this.inputSecond === "") return
+        if(this.inputSecond === '') return
         //if the initial input number does not equal "blank" run the calculate function.
-        if(this.inputInit !== "") {
+        if(this.inputInit !== '') {
             this.calculate()
         }
         //this sets the function (operation) input as the active function (operation)
@@ -39,12 +39,45 @@ class Calculator {
         //this moves the initial input number to the second input line.
         this.inputInit = this.inputSecond
         //this resets the initial input field to allow for further number input.
-        this.inputInit = ""
+        this.inputSecond = ''
     }
 
     //runs the input function.
     calculate() {
-
+        let calculation
+        //this changes the initial and secondary input strings back into a numbers.
+        const initial = parseFloat(this.inputInit)
+        const secondary = parseFloat(this.inputSecond)
+        //this checks to ensure both inputs are numbers before running the calculation.
+        if(isNaN(initial) || isNaN(secondary)) return
+        //running a switchcase to apply the correct calculator function.
+        switch (this.operation) {
+            //if function input is "+" run this case
+            case '+' :
+                this.calculation = initial + secondary
+                break
+                //if function input is "-" run this case
+            case '-' :
+                this.calculation = initial - secondary
+                break
+                //if function input is "*" run this case
+            case '*' :
+                this.calculation = initial * secondary
+                break
+                //if function input is "÷" run this case
+            case '÷' :
+            this.calculation = initial / secondary
+            break
+            //this default acts as an if statement; if anything other than the above functions are input
+            //run a return (don't carry out a function.)
+            default:
+                return
+        }
+        //the secondary input line will show the calculation answer.
+        //the function will be reset to undefined and the initial input function will be reset.
+        this.inputSecond = calculation
+        this.operation = undefined
+        this.inputInit = ''
     }
 
     //allows the display to update with the correct output.
@@ -87,25 +120,16 @@ functionButton.forEach(button => {
     })
 })
 
+//add an event listener to the equals button.
+equalsButton.addEventListener("click", button => {
+    //pressing the equals button will run calculate and updateScreen functions.
+    calculator.calculate()
+    calculator.updateScreen()
+})
 
-
-// const clear = document.querySelector(".button__modifier--clear")
-// const handleClickClear = ((event) => {
-//     console.log("event object", event);
-// })
-
-// clear.addEventListener("click", handleClickClear);
-
-// const plusMinus = document.querySelector(".button__modifier--plusMinus")
-// const handleClickPm = ((event) => {
-//     console.log("event object", event);
-// })
-
-// plusMinus.addEventListener("click", handleClickPm);
-
-// const percent = document.querySelector(".button__modifier--percent")
-// const handleClickPercent = ((event) => {
-//     console.log("event object", event);
-// })
-
-// percent.addEventListener("click", handleClickPercent);
+//add an event listener to the clear button.
+clearButton.addEventListener("click", button => {
+    //pressing the clear button will run clear and updateScreen functions.
+    calculator.clear()
+    calculator.updateScreen()
+})
