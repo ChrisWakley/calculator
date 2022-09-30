@@ -32,24 +32,18 @@ button {
 
 .button__modifier {
     background-color: $color-modifier;
-    .button__text {
-        font-family: $font-body;
-        font-size: 2rem;
-        color: $color-white;
-    }
+    font-family: $font-body;
+    font-size: 2rem;
+    color: $color-white;
 }
 .button__function {
     background-color: $color-function;
-    .button__text {
-        font-family: $font-body;
-        font-size: 2rem;
-    }
+    font-family: $font-body;
+    font-size: 2rem;
 }
 .button__input {
     background-color: $color-input;
-    .button__text {
-        font-family: $font-body;
+    font-family: $font-body;
         font-size: 2rem;
         color: $color-white;
-    }
 }
