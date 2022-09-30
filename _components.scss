@@ -6,18 +6,28 @@
 
 .screen__container {
     background-color: $color-screen;
-    .screen {
+    .screen__output {
         border: 20px solid $color-black;
-        .screen__text {
-            font-family: $font-display;
-            font-size: 4rem;
-            color: $color-white;
+        .screen__input {
+            &--init{
+                color: $color-grey;
+                font-size: 1rem;
+            }
+            &--second {
+                color: $color-white;
+                font-size: 2rem;
+            }
         }
     }
 }
 
+button:hover {
+    opacity: 75%;
+}
+
 button {
     border-radius: 50px;
+    cursor: pointer;
 }
 
 .button__modifier {

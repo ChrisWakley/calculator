@@ -8,12 +8,16 @@
 
 .screen__container {
     height: 15vh;
-    .screen {
+    .screen__output {
+        grid-column: 1 / -1;
         display: flex;
-        height: 11vh;
-        justify-content: right;
-        align-items: flex-end
-    };
+        align-items: flex-end;
+        justify-content: space-around;
+        flex-direction: column;
+        padding: 1rem;
+        word-wrap: break-word;
+        word-break: break-all;
+    }   
 }
 
 .button__container {
@@ -107,9 +111,9 @@
 @media screen and (min-width: 768px) {
     .calculator__container {
         margin-top: 10%;
-        margin-left: 20%;
+        margin-left: 25%;
         height: 80%;
-        width: 60%;
+        width: 50%;
     }
 }
 @media screen and (min-width: 1024px) {

@@ -11,7 +11,7 @@ html, body {
 
 @media screen and (min-width: 520px) {
   html {
-    background-color: #000000;
+    background: linear-gradient(to right, #0e3d6b, #00abf5de);
   }
 }
 .calculator__container {
@@ -21,17 +21,25 @@ html, body {
 .screen__container {
   background-color: #4f4646a6;
 }
-.screen__container .screen {
+.screen__container .screen__output {
   border: 20px solid #000000;
 }
-.screen__container .screen .screen__text {
-  font-family: "Roboto", sans-serif;
-  font-size: 4rem;
+.screen__container .screen__output .screen__input--init {
+  color: #bebcbc;
+  font-size: 1rem;
+}
+.screen__container .screen__output .screen__input--second {
   color: #fafafa;
+  font-size: 2rem;
+}
+
+button:hover {
+  opacity: 75%;
 }
 
 button {
   border-radius: 50px;
+  cursor: pointer;
 }
 
 .button__modifier {
@@ -71,11 +79,15 @@ button {
 .screen__container {
   height: 15vh;
 }
-.screen__container .screen {
+.screen__container .screen__output {
+  grid-column: 1/-1;
   display: flex;
-  height: 11vh;
-  justify-content: right;
   align-items: flex-end;
+  justify-content: space-around;
+  flex-direction: column;
+  padding: 1rem;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
 .button__container {
@@ -160,9 +172,9 @@ button {
 @media screen and (min-width: 768px) {
   .calculator__container {
     margin-top: 10%;
-    margin-left: 20%;
+    margin-left: 25%;
     height: 80%;
-    width: 60%;
+    width: 50%;
   }
 }
 @media screen and (min-width: 1024px) {

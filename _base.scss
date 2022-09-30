@@ -7,6 +7,7 @@ $color-modifier: #0e3d6b;
 $color-function: #00abf5de;
 $color-input: #b5b2b26d;
 $color-white: #fafafa;
+$color-grey: #bebcbc;
 $color-black: #000000;
 $color-screen: #4f4646a6;
 
@@ -23,6 +24,6 @@ html, body {
 
 @media screen and (min-width: 520px) {
     html {
-        background-color: $color-black;
+        background: linear-gradient(to right, $color-modifier, $color-function);
     }
 }
