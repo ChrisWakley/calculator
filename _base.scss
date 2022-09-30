@@ -20,3 +20,9 @@ html, body {
     height: 100%;
     overflow: hidden;
 }
+
+@media screen and (min-width: 520px) {
+    html {
+        background-color: $color-black;
+    }
+}
