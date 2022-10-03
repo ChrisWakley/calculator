@@ -54,24 +54,24 @@ class Calculator {
         switch (this.operation) {
             //if function input is "+" run this case
             case '+' :
-                this.calculation = initial + secondary
+                calculation = initial + secondary
                 break
                 //if function input is "-" run this case
             case '-' :
-                this.calculation = initial - secondary
+                calculation = initial - secondary
                 break
                 //if function input is "*" run this case
             case '*' :
-                this.calculation = initial * secondary
+                calculation = initial * secondary
                 break
                 //if function input is "÷" run this case
             case '÷' :
-            this.calculation = initial / secondary
-            break
-            //this default acts as an if statement; if anything other than the above functions are input
-            //run a return (don't carry out a function.)
+                calculation = initial / secondary
+                break
+                //this default acts as an if statement; if anything other than the above functions are input
+                //run a return (don't carry out a function.)
             default:
-                return
+                this.calculation = "0"
         }
         //the secondary input line will show the calculation answer.
         //the function will be reset to undefined and the initial input function will be reset.
